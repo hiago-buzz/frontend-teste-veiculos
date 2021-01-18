@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestService {
 
-  constructor(
-    private baseUrl: string = process.env.BASE_URL,
-    private http: HttpClient,
-    private format: string = 'json'
-  ) { }
+  constructor(private http: HttpClient) { }
 
-  public getter(url: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/api/1/${url}.${this.format}`);
+  readonly baseUrl: string = environment.BASE_URL;
+  readonly format: string = 'json';
+
+  public getter(endpoint: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/api/1/carros/${endpoint}.${this.format}`);
   }
 }
