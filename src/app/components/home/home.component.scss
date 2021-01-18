@@ -1,0 +1,12 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+}

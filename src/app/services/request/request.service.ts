@@ -13,7 +13,7 @@ export class RequestService {
   readonly baseUrl: string = environment.BASE_URL;
   readonly format: string = 'json';
 
-  public getter(endpoint: string): Observable<any> {
+  public get(endpoint: string): Observable<any> {
     return this.http.get(`${this.baseUrl}/api/1/carros/${endpoint}.${this.format}`);
   }
 }

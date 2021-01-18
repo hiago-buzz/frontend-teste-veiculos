@@ -19,7 +19,7 @@
   </div>
   <div>
     <label for="ano">Ano</label>
-    <select id="selectAno" placeholder="Escolha um Ano">
+    <select id="selectAno" placeholder="Escolha um Ano"  (change)="getVeiculo($event.target.value)">
       <option value="" hidden selected>Selecione...</option>
       <option *ngFor="let ano of anos" value={{ano.id}}>
         {{ano.name}}

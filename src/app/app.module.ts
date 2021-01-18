@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     NavbarComponent,
     HomeComponent,
     SidebarComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
