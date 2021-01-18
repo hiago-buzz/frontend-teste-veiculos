@@ -1,27 +1,35 @@
 # FrontendTesteVeiculos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+Esse projeto foi gerado usando [Angular CLI](https://github.com/angular/angular-cli) versão 11.0.7.
 
-## Development server
+## Como utilizar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Utilize `ng serve` para criar um servidor local em  `http://localhost:4200/`. 
 
-## Code scaffolding
+## Rotas utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este projeto utiliza a api `http://www.fipeapi.appspot.com` para consulta de modelo de veiculos.
 
-## Build
+Os endpoints em uso são:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+- Listagem de marcas: `/marcas`
+- Listagem de modelos por marca: `veiculos/{idMarca}`
+- Listagem de versão por modelo: `/veiculo/{idMarca}/{idModelo}`
+- Listagem de veiculo específico por ano: `veiculo/${idMarca}/${idModelo}/${idVeiculo}`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Variaveis de ambiente
 
-## Running end-to-end tests
+- `production` : booleano que indica o ambiente em uso.
+- `BASE_URL` : string que indica a url base da api de consulta.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Estilo
 
-## Further help
+Este projeto é feito com `scss` contendo dois arquivos globais.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- styles.scss
+- variables.scss
+
+## Testes 
+
+A cobertura de testes pode ser validada com `npm run test`. Usando como módulo de testes a lib `jest`.
